@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.addons.css')}}">
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('favicon.ico')}}" />
+  <link rel="icon" type="image/png" href="{{asset('logo.png')}}" />
 </head>
 
 <body>
