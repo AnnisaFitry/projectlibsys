@@ -111,15 +111,17 @@
                           </div>
                         </div>
                         @else
-                        @if($data->status == 'pinjam')
-                        <form action="{{ route('transaksi.update', $data->id) }}" method="post" enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            {{ method_field('put') }}
-                            <button class="btn btn-info btn-xs" onclick="return confirm('Anda yakin data ini sudah kembali?')">Sudah Kembali
-                            </button>
-                          </form>
-                          @else
-                          -
+                        @if(Auth::user()->level == 'admin')
+                          @if($data->status == 'pinjam')
+                          <form action="{{ route('transaksi.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                              {{ csrf_field() }}
+                              {{ method_field('put') }}
+                              <button class="btn btn-info btn-xs" onclick="return confirm('Anda yakin data ini sudah kembali?')">Sudah Kembali
+                              </button>
+                            </form>
+                            @else
+                            -
+                            @endif
                           @endif
                         @endif
                           </td>
