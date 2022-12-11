@@ -157,6 +157,7 @@
                             <label class="badge badge-success">Kembali</label>
                           @endif
                           </td>
+                          @if(Auth::user()->level == 'admin')
                           <td>
                           <form action="{{ route('transaksi.update', $data->id) }}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
@@ -166,6 +167,7 @@
                           </form>
                           
                           </td>
+                          @endif
                         </tr>
                       @endforeach
                       </tbody>
