@@ -217,10 +217,10 @@
                             Nama
                           </th>
                           <th>
-                            NPM
+                            NISN
                           </th>
                           <th>
-                            Prodi
+                            Kelas
                           </th>
                           <th>
                             Jenis Kelamin
@@ -240,16 +240,16 @@
                             {{$data->nama}}
                           </td>
                           <td>
-                            {{$data->npm}}
+                            {{$data->nisn}}
                           </td>
 
                           <td>
-                          @if($data->prodi == 'TI')
-                            Teknik Informatika
-                          @elseif($data->prodi == 'SI')
-                            Sistem Informasi
+                          @if($data->kelas == '10')
+                            Kelas 10
+                          @elseif($data->kelas == '11')
+                            Kelas 11
                           @else
-                            Kesehatan Masyarakat
+                            Kelas 12
                           @endif
                           </td>
                           <td>
