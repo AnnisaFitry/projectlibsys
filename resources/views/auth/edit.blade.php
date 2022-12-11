@@ -103,9 +103,6 @@ var check = function() {
                             </select>
                             </div>
                         </div>
-                        @endif
-
-
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
                             <div class="col-md-6">
@@ -124,6 +121,7 @@ var check = function() {
                                 <span id='message'></span>
                             </div>
                         </div>
+                        @endif
                         <button type="submit" class="btn btn-primary" id="submit">
                                     Update
                         </button>
